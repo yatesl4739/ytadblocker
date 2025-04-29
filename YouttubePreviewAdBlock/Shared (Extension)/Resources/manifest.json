@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "YTPreviewNoAds",
+  "version": "1.0",
+  "description": "Plays YouTube videos with the hover-preview stream so no ads ever load.",
+  "icons": { "48": "icon48.png", "128": "icon128.png" },
+
+  "permissions": [ "activeTab", "storage" ],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://i.ytimg.com/*"
+  ],
+
+  "content_scripts": [{
+    "matches": [ "https://www.youtube.com/watch*"],
+    "js": [ "content.js" ],
+    "css": [ "overlay.css" ],
+    "run_at": "document_idle"
+  }],
+
+  "background": { "scripts": [ "background.js" ] },
+  "browser_action": { "default_title": "YTPreviewNoAds" }
+}
+

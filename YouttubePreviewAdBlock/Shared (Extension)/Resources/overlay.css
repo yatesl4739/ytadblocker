@@ -1,0 +1,31 @@
+
+#ypn-overlay {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2147483647; /* top of everything */
+}
+
+#ypn-overlay video {
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 0 24px rgba(0,0,0,.6);
+}
+
+#ypn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  line-height: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+ 
